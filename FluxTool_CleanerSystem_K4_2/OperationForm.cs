@@ -997,7 +997,8 @@ namespace FluxTool_CleanerSystem_K4_2
                     textBoxWaterSupply.Text = "Close";
                 }
             }
-            
+
+            textBoxWaterTemp.Text = Define.temp_PV.ToString();
 
             // Daily count
             textBoxPM1DailyCnt.Text = Define.iPM1DailyCnt.ToString("00");

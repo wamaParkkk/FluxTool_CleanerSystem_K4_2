@@ -42,9 +42,7 @@ namespace FluxTool_CleanerSystem_K4_2
 
             logdisplayTimer.Interval = 500;
             logdisplayTimer.Elapsed += new ElapsedEventHandler(Eventlog_Display);
-            logdisplayTimer.Start();
-
-            heater_ctrl = new HanyoungNuxClass();
+            logdisplayTimer.Start();            
         }
 
         private void SetDoubleBuffered(Control control, bool doubleBuffered = true)
@@ -138,8 +136,7 @@ namespace FluxTool_CleanerSystem_K4_2
                     WaterLevelLowSns.BackColor = Color.Lime;
             }
 
-            textBoxCurrentTemp.Text = (Define.temp_PV).ToString();
-            textBoxSettingTemp.Text = (Define.temp_SV).ToString();
+            textBoxCurrentTemp.Text = (Define.temp_PV).ToString();            
 
 
             // Output display
@@ -354,16 +351,27 @@ namespace FluxTool_CleanerSystem_K4_2
                 MessageBox.Show("CH1/CH2/CH3/Water tank process in progress", "Notification");
                 return;
             }
-
-            analogDlg = new AnalogDlg();
-
-            analogDlg.Text = "";
-            if (analogDlg.ShowDialog() == DialogResult.OK)
+            
+            try
             {
-                textBoxSettingTemp.Text = analogDlg.m_strResult;
+                analogDlg = new AnalogDlg();
+                analogDlg.Text = "";
+                heater_ctrl = new HanyoungNuxClass();
 
-                Define.temp_SV = double.Parse(textBoxSettingTemp.Text);
-                heater_ctrl.set_Temp(Define.temp_SV);
+                if (analogDlg.ShowDialog() == DialogResult.OK)
+                {
+                    string strVal = analogDlg.m_strResult;
+                    bool bResult = double.TryParse(strVal, out double dVal);
+                    if (bResult)
+                    {
+                        heater_ctrl.set_Temp(dVal);
+                        textBoxSettingTemp.Text = dVal.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
