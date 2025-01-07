@@ -363,11 +363,7 @@ namespace FluxTool_CleanerSystem_K4_2
         public static bool[] bChamberDisable = { false, false, false };
 
         // Process end flag
-        public static bool[] bProcessEnd = { false, false, false };
-
-        // HanyoungNX Heater 변수      
-        public static double temp_PV;
-        public static double temp_SV;
+        public static bool[] bProcessEnd = { false, false, false };        
 
         // Tool 이력 관리 정보        
         public static string[] ToolInfoRegist_User = { string.Empty, string.Empty, string.Empty };

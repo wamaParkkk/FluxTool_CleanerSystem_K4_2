@@ -1,4 +1,5 @@
 ﻿using Ajin_IO_driver;
+using HanyoungNXClassLibrary;
 using MsSqlManagerLibrary;
 using System;
 using System.Drawing;
@@ -92,6 +93,9 @@ namespace FluxTool_CleanerSystem_K4_2
             {
                 m_ioForm.DI_Parsing_timer.Start();
             }
+
+            // Heater controller
+            HanyoungNXClass.HanyoungNX_Init();
 
             Global.Init();
 
@@ -211,6 +215,8 @@ namespace FluxTool_CleanerSystem_K4_2
             waterTankFill.Dispose();
 
             DIOClass.CloseDevice();
+
+            HanyoungNXClass.DRV_CLOSE();
         }
 
         public void SubFormShow(byte PageNum)

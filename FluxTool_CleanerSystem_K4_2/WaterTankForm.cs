@@ -1,4 +1,4 @@
-﻿using FluxTool_CleanerSystem_K4_2.SerialComm;
+﻿using HanyoungNXClassLibrary;
 using System;
 using System.Drawing;
 using System.IO;
@@ -17,9 +17,7 @@ namespace FluxTool_CleanerSystem_K4_2
         string ModuleName;
 
         AnalogDlg analogDlg;
-        DigitalDlg digitalDlg;
-
-        HanyoungNuxClass heater_ctrl;
+        DigitalDlg digitalDlg;        
 
         private Timer logdisplayTimer = new Timer();
 
@@ -136,7 +134,8 @@ namespace FluxTool_CleanerSystem_K4_2
                     WaterLevelLowSns.BackColor = Color.Lime;
             }
 
-            textBoxCurrentTemp.Text = (Define.temp_PV).ToString();            
+            textBoxCurrentTemp.Text = HanyoungNXClassLibrary.Define.temp_PV.ToString("0.0");
+            textBoxSettingTemp.Text = HanyoungNXClassLibrary.Define.temp_SV.ToString("0.0");
 
 
             // Output display
@@ -355,8 +354,7 @@ namespace FluxTool_CleanerSystem_K4_2
             try
             {
                 analogDlg = new AnalogDlg();
-                analogDlg.Text = "";
-                heater_ctrl = new HanyoungNuxClass();
+                analogDlg.Text = "";                
 
                 if (analogDlg.ShowDialog() == DialogResult.OK)
                 {
@@ -364,8 +362,8 @@ namespace FluxTool_CleanerSystem_K4_2
                     bool bResult = double.TryParse(strVal, out double dVal);
                     if (bResult)
                     {
-                        heater_ctrl.set_Temp(dVal);
-                        textBoxSettingTemp.Text = dVal.ToString();
+                        HanyoungNXClass.set_Temp(dVal);
+                        HanyoungNXClassLibrary.Define.temp_SV = dVal;
                     }
                 }
             }

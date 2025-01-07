@@ -998,7 +998,8 @@ namespace FluxTool_CleanerSystem_K4_2
                 }
             }
 
-            textBoxWaterTemp.Text = Define.temp_PV.ToString();
+            textBoxWaterTemp.Text = HanyoungNXClassLibrary.Define.temp_PV.ToString("0.0");
+
 
             // Daily count
             textBoxPM1DailyCnt.Text = Define.iPM1DailyCnt.ToString("00");

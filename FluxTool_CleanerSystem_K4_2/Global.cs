@@ -1,5 +1,4 @@
 ﻿using Ajin_IO_driver;
-using FluxTool_CleanerSystem_K4_2.SerialComm;
 using MsSqlManagerLibrary;
 using System;
 using System.IO;
@@ -65,9 +64,7 @@ namespace FluxTool_CleanerSystem_K4_2
         private static uint nSeqWaitCnt = 0;
 
         static string sendMsg_System = "Idle";
-        static string sendMsg_Water = "Idle";
-
-        private static HanyoungNuxClass heater_ctrl;
+        static string sendMsg_Water = "Idle";        
 
         #region 이벤트로그 파일 폴더 및 파일 생성       
         public static void EventLog(string Msg, string moduleName, string Mode)
@@ -287,9 +284,7 @@ namespace FluxTool_CleanerSystem_K4_2
                 prcsInfo.prcsEndTime[nModuleCnt] = string.Empty;
             }
 
-            interlockDisplayForm = new InterlockDisplayForm();
-
-            heater_ctrl = new HanyoungNuxClass();
+            interlockDisplayForm = new InterlockDisplayForm();            
 
             timer.Interval = 100;
             timer.Elapsed += new ElapsedEventHandler(VALUE_INTERLOCK_CHECK);
@@ -685,9 +680,7 @@ namespace FluxTool_CleanerSystem_K4_2
                         {
                             SetDigValue((int)DigOutputList.Hot_WaterHeater_o, (uint)DigitalOffOn.On, "PM1");                            
                         }
-                    }
-
-                    heater_ctrl.set_Temp(Configure_List.Water_Heating_Temp);
+                    }                    
 
                     if (sendMsg_Water != "Idle")
                     {

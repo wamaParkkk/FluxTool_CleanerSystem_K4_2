@@ -59,6 +59,9 @@
     <Reference Include="Ajin_IO_driver">
       <HintPath>..\..\Ajin_IO_driver\Ajin_IO_driver\bin\Release\Ajin_IO_driver.dll</HintPath>
     </Reference>
+    <Reference Include="HanyoungNXClassLibrary">
+      <HintPath>..\..\HanyoungNXClassLibrary\HanyoungNXClassLibrary\bin\Release\HanyoungNXClassLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="MsSqlManagerLibrary">
       <HintPath>..\..\MsSqlManagerLibrary\MsSqlManagerLibrary\bin\Release\MsSqlManagerLibrary.dll</HintPath>
     </Reference>
@@ -191,7 +194,6 @@
     <Compile Include="RecipeSelectForm.Designer.cs">
       <DependentUpon>RecipeSelectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SerialComm\HanyoungNux_Temp.cs" />
     <Compile Include="Squence\PM1Cylinder.cs" />
     <Compile Include="Squence\PM1Process.cs" />
     <Compile Include="Squence\PM2Cylinder.cs" />
@@ -369,6 +371,8 @@
     <None Include="images\ExitButton.png" />
     <None Include="images\AlarmButton.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="SerialComm\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
