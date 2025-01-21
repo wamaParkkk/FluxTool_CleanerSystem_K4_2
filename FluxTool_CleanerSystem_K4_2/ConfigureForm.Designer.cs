@@ -32,6 +32,9 @@ namespace FluxTool_CleanerSystem_K4_2
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigureForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtBoxProcessEndBuzzerTime = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxPinTimeInterval = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,9 +62,9 @@ namespace FluxTool_CleanerSystem_K4_2
             this.checkBoxBack = new System.Windows.Forms.CheckBox();
             this.checkBoxLeft = new System.Windows.Forms.CheckBox();
             this.checkBoxFront = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtBoxProcessEndBuzzerTime = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtBoxWaterOverTempSet = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -98,6 +101,43 @@ namespace FluxTool_CleanerSystem_K4_2
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "< Time set >";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Navy;
+            this.label9.Location = new System.Drawing.Point(495, 205);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 25);
+            this.label9.TabIndex = 53;
+            this.label9.Text = "Sec";
+            // 
+            // txtBoxProcessEndBuzzerTime
+            // 
+            this.txtBoxProcessEndBuzzerTime.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBoxProcessEndBuzzerTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBoxProcessEndBuzzerTime.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxProcessEndBuzzerTime.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtBoxProcessEndBuzzerTime.Location = new System.Drawing.Point(333, 200);
+            this.txtBoxProcessEndBuzzerTime.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtBoxProcessEndBuzzerTime.Name = "txtBoxProcessEndBuzzerTime";
+            this.txtBoxProcessEndBuzzerTime.ReadOnly = true;
+            this.txtBoxProcessEndBuzzerTime.Size = new System.Drawing.Size(152, 30);
+            this.txtBoxProcessEndBuzzerTime.TabIndex = 52;
+            this.txtBoxProcessEndBuzzerTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxProcessEndBuzzerTime.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Navy;
+            this.label10.Location = new System.Drawing.Point(26, 200);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(227, 25);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Process end buzzer time";
             // 
             // label7
             // 
@@ -322,6 +362,9 @@ namespace FluxTool_CleanerSystem_K4_2
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.txtBoxWaterOverTempSet);
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.btnHeatingTempSave);
             this.groupBox2.Controls.Add(this.txtBoxHeatingTemp);
             this.groupBox2.Controls.Add(this.label3);
@@ -378,7 +421,7 @@ namespace FluxTool_CleanerSystem_K4_2
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(27, 50);
+            this.label3.Location = new System.Drawing.Point(27, 52);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 25);
@@ -392,9 +435,9 @@ namespace FluxTool_CleanerSystem_K4_2
             this.label5.Location = new System.Drawing.Point(333, 55);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 25);
+            this.label5.Size = new System.Drawing.Size(32, 25);
             this.label5.TabIndex = 24;
-            this.label5.Text = "C";
+            this.label5.Text = "℃";
             // 
             // groupBox3
             // 
@@ -459,42 +502,43 @@ namespace FluxTool_CleanerSystem_K4_2
             this.checkBoxFront.UseVisualStyleBackColor = true;
             this.checkBoxFront.Click += new System.EventHandler(this.checkBoxFront_Click);
             // 
-            // label9
+            // txtBoxWaterOverTempSet
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Navy;
-            this.label9.Location = new System.Drawing.Point(495, 205);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 25);
-            this.label9.TabIndex = 53;
-            this.label9.Text = "Sec";
+            this.txtBoxWaterOverTempSet.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBoxWaterOverTempSet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBoxWaterOverTempSet.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxWaterOverTempSet.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtBoxWaterOverTempSet.Location = new System.Drawing.Point(171, 92);
+            this.txtBoxWaterOverTempSet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtBoxWaterOverTempSet.Name = "txtBoxWaterOverTempSet";
+            this.txtBoxWaterOverTempSet.ReadOnly = true;
+            this.txtBoxWaterOverTempSet.Size = new System.Drawing.Size(152, 30);
+            this.txtBoxWaterOverTempSet.TabIndex = 58;
+            this.txtBoxWaterOverTempSet.Tag = "1";
+            this.txtBoxWaterOverTempSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxWaterOverTempSet.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
             // 
-            // txtBoxProcessEndBuzzerTime
+            // label12
             // 
-            this.txtBoxProcessEndBuzzerTime.BackColor = System.Drawing.SystemColors.Control;
-            this.txtBoxProcessEndBuzzerTime.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtBoxProcessEndBuzzerTime.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxProcessEndBuzzerTime.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtBoxProcessEndBuzzerTime.Location = new System.Drawing.Point(333, 200);
-            this.txtBoxProcessEndBuzzerTime.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtBoxProcessEndBuzzerTime.Name = "txtBoxProcessEndBuzzerTime";
-            this.txtBoxProcessEndBuzzerTime.ReadOnly = true;
-            this.txtBoxProcessEndBuzzerTime.Size = new System.Drawing.Size(152, 30);
-            this.txtBoxProcessEndBuzzerTime.TabIndex = 52;
-            this.txtBoxProcessEndBuzzerTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBoxProcessEndBuzzerTime.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Navy;
+            this.label12.Location = new System.Drawing.Point(56, 94);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(105, 25);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Over temp";
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(26, 200);
-            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(227, 25);
-            this.label10.TabIndex = 51;
-            this.label10.Text = "Process end buzzer time";
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Navy;
+            this.label11.Location = new System.Drawing.Point(333, 97);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 25);
+            this.label11.TabIndex = 59;
+            this.label11.Text = "℃";
             // 
             // ConfigureForm
             // 
@@ -555,5 +599,8 @@ namespace FluxTool_CleanerSystem_K4_2
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBoxProcessEndBuzzerTime;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtBoxWaterOverTempSet;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

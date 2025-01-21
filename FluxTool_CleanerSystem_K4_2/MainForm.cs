@@ -864,5 +864,14 @@ namespace FluxTool_CleanerSystem_K4_2
             WritePrivateProfileString("TodayRuntime", "Time", "0", string.Format("{0}{1}", Global.dailyCntfilePath, "TodayRuntime.ini"));
             Define.dTodayRunTime = 0;
         }
+
+        private void HeaterInitTimer_Tick(object sender, EventArgs e)
+        {
+            // Water temp 초기 셋팅
+            HanyoungNXClass.set_Temp(Configure_List.Water_Heating_Temp);
+            HanyoungNXClassLibrary.Define.temp_SV = Configure_List.Water_Heating_Temp;
+
+            HeaterInitTimer.Enabled = false;
+        }
     }
 }

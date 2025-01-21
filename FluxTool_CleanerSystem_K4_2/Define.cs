@@ -242,6 +242,7 @@ namespace FluxTool_CleanerSystem_K4_2
         public static int End_Buzzer_Time = 0;
 
         public static double Water_Heating_Temp = 0.0;
+        public static double Water_OverTempSet = 0.0;
 
         public static bool bFrontEnable;
         public static bool bLeftEnable;

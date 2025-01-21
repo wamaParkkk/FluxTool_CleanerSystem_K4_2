@@ -34,18 +34,23 @@ namespace FluxTool_CleanerSystem_K4_2
             this.timerDisplay = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.labelInterlockEnaDis = new System.Windows.Forms.Label();
+            this.pictureBoxEventLog = new System.Windows.Forms.PictureBox();
+            this.btnEventLog = new System.Windows.Forms.Button();
+            this.pictureBoxAlarm = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAlarm2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUserRegist = new System.Windows.Forms.PictureBox();
+            this.btnUserRegist = new System.Windows.Forms.Button();
+            this.laUserLevel = new System.Windows.Forms.Label();
+            this.btnAlarm = new System.Windows.Forms.Button();
+            this.labelPageName = new System.Windows.Forms.Label();
+            this.laTime = new System.Windows.Forms.Label();
+            this.laDate = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panelOption = new System.Windows.Forms.Panel();
-            this.checkBoxInterlockRelease = new System.Windows.Forms.CheckBox();
-            this.simulationTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnWaterTank = new System.Windows.Forms.Button();
-            this.btnRightModule = new System.Windows.Forms.Button();
-            this.btnCenterModule = new System.Windows.Forms.Button();
-            this.btnLeftModule = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBoxToolHistory = new System.Windows.Forms.PictureBox();
             this.btnToolHistory = new System.Windows.Forms.Button();
@@ -61,28 +66,26 @@ namespace FluxTool_CleanerSystem_K4_2
             this.btnRecipe = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnIO = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.labelInterlockEnaDis = new System.Windows.Forms.Label();
-            this.pictureBoxEventLog = new System.Windows.Forms.PictureBox();
-            this.btnEventLog = new System.Windows.Forms.Button();
-            this.pictureBoxAlarm = new System.Windows.Forms.PictureBox();
-            this.pictureBoxAlarm2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUserRegist = new System.Windows.Forms.PictureBox();
-            this.btnUserRegist = new System.Windows.Forms.Button();
-            this.laUserLevel = new System.Windows.Forms.Label();
-            this.btnAlarm = new System.Windows.Forms.Button();
-            this.labelPageName = new System.Windows.Forms.Label();
-            this.laTime = new System.Windows.Forms.Label();
-            this.laDate = new System.Windows.Forms.Label();
-            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnWaterTank = new System.Windows.Forms.Button();
+            this.btnRightModule = new System.Windows.Forms.Button();
+            this.btnCenterModule = new System.Windows.Forms.Button();
+            this.btnLeftModule = new System.Windows.Forms.Button();
+            this.panelOption = new System.Windows.Forms.Panel();
+            this.checkBoxInterlockRelease = new System.Windows.Forms.CheckBox();
+            this.simulationTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.HeaterInitTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEventLog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserRegist)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panelOption.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToolHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOperation)).BeginInit();
@@ -91,11 +94,9 @@ namespace FluxTool_CleanerSystem_K4_2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfigure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEventLog)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserRegist)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panelOption.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerDisplay
@@ -121,6 +122,217 @@ namespace FluxTool_CleanerSystem_K4_2
             this.panel4.Size = new System.Drawing.Size(1005, 100);
             this.panel4.TabIndex = 1;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.labelInterlockEnaDis);
+            this.panel5.Controls.Add(this.pictureBoxEventLog);
+            this.panel5.Controls.Add(this.btnEventLog);
+            this.panel5.Controls.Add(this.pictureBoxAlarm);
+            this.panel5.Controls.Add(this.pictureBoxAlarm2);
+            this.panel5.Controls.Add(this.pictureBoxUserRegist);
+            this.panel5.Controls.Add(this.btnUserRegist);
+            this.panel5.Controls.Add(this.laUserLevel);
+            this.panel5.Controls.Add(this.btnAlarm);
+            this.panel5.Controls.Add(this.labelPageName);
+            this.panel5.Controls.Add(this.laTime);
+            this.panel5.Controls.Add(this.laDate);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1005, 100);
+            this.panel5.TabIndex = 20;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Lime;
+            this.button1.Location = new System.Drawing.Point(296, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 50);
+            this.button1.TabIndex = 161;
+            this.button1.Text = "Buzzer\r\noff";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.pictureBoxAlarm_Click);
+            // 
+            // labelInterlockEnaDis
+            // 
+            this.labelInterlockEnaDis.AutoSize = true;
+            this.labelInterlockEnaDis.BackColor = System.Drawing.Color.Transparent;
+            this.labelInterlockEnaDis.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInterlockEnaDis.ForeColor = System.Drawing.Color.Yellow;
+            this.labelInterlockEnaDis.Location = new System.Drawing.Point(53, 67);
+            this.labelInterlockEnaDis.Name = "labelInterlockEnaDis";
+            this.labelInterlockEnaDis.Size = new System.Drawing.Size(211, 32);
+            this.labelInterlockEnaDis.TabIndex = 157;
+            this.labelInterlockEnaDis.Text = "Interlock release!";
+            this.labelInterlockEnaDis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelInterlockEnaDis.Visible = false;
+            // 
+            // pictureBoxEventLog
+            // 
+            this.pictureBoxEventLog.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxEventLog.BackgroundImage = global::FluxTool_CleanerSystem_K4_2.Properties.Resources.log;
+            this.pictureBoxEventLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxEventLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxEventLog.Location = new System.Drawing.Point(529, 29);
+            this.pictureBoxEventLog.Name = "pictureBoxEventLog";
+            this.pictureBoxEventLog.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxEventLog.TabIndex = 156;
+            this.pictureBoxEventLog.TabStop = false;
+            this.pictureBoxEventLog.Click += new System.EventHandler(this.btnEventLog_Click);
+            // 
+            // btnEventLog
+            // 
+            this.btnEventLog.BackColor = System.Drawing.Color.Transparent;
+            this.btnEventLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEventLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEventLog.FlatAppearance.BorderSize = 0;
+            this.btnEventLog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEventLog.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEventLog.ForeColor = System.Drawing.Color.White;
+            this.btnEventLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEventLog.Location = new System.Drawing.Point(570, 29);
+            this.btnEventLog.Name = "btnEventLog";
+            this.btnEventLog.Size = new System.Drawing.Size(111, 42);
+            this.btnEventLog.TabIndex = 155;
+            this.btnEventLog.Text = "Event Log";
+            this.btnEventLog.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEventLog.UseVisualStyleBackColor = false;
+            this.btnEventLog.Click += new System.EventHandler(this.btnEventLog_Click);
+            // 
+            // pictureBoxAlarm
+            // 
+            this.pictureBoxAlarm.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAlarm.BackgroundImage = global::FluxTool_CleanerSystem_K4_2.Properties.Resources.Alarm1;
+            this.pictureBoxAlarm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxAlarm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxAlarm.Location = new System.Drawing.Point(371, 29);
+            this.pictureBoxAlarm.Name = "pictureBoxAlarm";
+            this.pictureBoxAlarm.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxAlarm.TabIndex = 150;
+            this.pictureBoxAlarm.TabStop = false;
+            this.pictureBoxAlarm.Click += new System.EventHandler(this.pictureBoxAlarm_Click);
+            // 
+            // pictureBoxAlarm2
+            // 
+            this.pictureBoxAlarm2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAlarm2.BackgroundImage = global::FluxTool_CleanerSystem_K4_2.Properties.Resources.Alarm2;
+            this.pictureBoxAlarm2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxAlarm2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxAlarm2.Location = new System.Drawing.Point(371, 29);
+            this.pictureBoxAlarm2.Name = "pictureBoxAlarm2";
+            this.pictureBoxAlarm2.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxAlarm2.TabIndex = 154;
+            this.pictureBoxAlarm2.TabStop = false;
+            this.pictureBoxAlarm2.Click += new System.EventHandler(this.pictureBoxAlarm_Click);
+            // 
+            // pictureBoxUserRegist
+            // 
+            this.pictureBoxUserRegist.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxUserRegist.BackgroundImage = global::FluxTool_CleanerSystem_K4_2.Properties.Resources.register;
+            this.pictureBoxUserRegist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxUserRegist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxUserRegist.Location = new System.Drawing.Point(687, 29);
+            this.pictureBoxUserRegist.Name = "pictureBoxUserRegist";
+            this.pictureBoxUserRegist.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxUserRegist.TabIndex = 153;
+            this.pictureBoxUserRegist.TabStop = false;
+            this.pictureBoxUserRegist.Click += new System.EventHandler(this.btnUserRegist_Click);
+            // 
+            // btnUserRegist
+            // 
+            this.btnUserRegist.BackColor = System.Drawing.Color.Transparent;
+            this.btnUserRegist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUserRegist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUserRegist.FlatAppearance.BorderSize = 0;
+            this.btnUserRegist.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUserRegist.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserRegist.ForeColor = System.Drawing.Color.White;
+            this.btnUserRegist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserRegist.Location = new System.Drawing.Point(728, 29);
+            this.btnUserRegist.Name = "btnUserRegist";
+            this.btnUserRegist.Size = new System.Drawing.Size(111, 42);
+            this.btnUserRegist.TabIndex = 152;
+            this.btnUserRegist.Text = "User regist";
+            this.btnUserRegist.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnUserRegist.UseVisualStyleBackColor = false;
+            this.btnUserRegist.Click += new System.EventHandler(this.btnUserRegist_Click);
+            // 
+            // laUserLevel
+            // 
+            this.laUserLevel.AutoSize = true;
+            this.laUserLevel.BackColor = System.Drawing.Color.Transparent;
+            this.laUserLevel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laUserLevel.ForeColor = System.Drawing.Color.Yellow;
+            this.laUserLevel.Location = new System.Drawing.Point(890, 17);
+            this.laUserLevel.Name = "laUserLevel";
+            this.laUserLevel.Size = new System.Drawing.Size(17, 14);
+            this.laUserLevel.TabIndex = 151;
+            this.laUserLevel.Text = "--";
+            // 
+            // btnAlarm
+            // 
+            this.btnAlarm.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlarm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAlarm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlarm.FlatAppearance.BorderSize = 0;
+            this.btnAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlarm.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlarm.ForeColor = System.Drawing.Color.White;
+            this.btnAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlarm.Location = new System.Drawing.Point(412, 29);
+            this.btnAlarm.Name = "btnAlarm";
+            this.btnAlarm.Size = new System.Drawing.Size(111, 42);
+            this.btnAlarm.TabIndex = 18;
+            this.btnAlarm.Text = "Alarm";
+            this.btnAlarm.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAlarm.UseVisualStyleBackColor = false;
+            this.btnAlarm.Click += new System.EventHandler(this.btnAlarm_Click);
+            // 
+            // labelPageName
+            // 
+            this.labelPageName.AutoSize = true;
+            this.labelPageName.BackColor = System.Drawing.Color.Transparent;
+            this.labelPageName.Font = new System.Drawing.Font("Nirmala UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPageName.ForeColor = System.Drawing.Color.White;
+            this.labelPageName.Location = new System.Drawing.Point(20, 16);
+            this.labelPageName.Name = "labelPageName";
+            this.labelPageName.Size = new System.Drawing.Size(55, 54);
+            this.labelPageName.TabIndex = 149;
+            this.labelPageName.Text = "--";
+            this.labelPageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // laTime
+            // 
+            this.laTime.AutoSize = true;
+            this.laTime.BackColor = System.Drawing.Color.Transparent;
+            this.laTime.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laTime.ForeColor = System.Drawing.SystemColors.Window;
+            this.laTime.Location = new System.Drawing.Point(890, 57);
+            this.laTime.Name = "laTime";
+            this.laTime.Size = new System.Drawing.Size(63, 14);
+            this.laTime.TabIndex = 148;
+            this.laTime.Text = "00:00:00";
+            // 
+            // laDate
+            // 
+            this.laDate.AutoSize = true;
+            this.laDate.BackColor = System.Drawing.Color.Transparent;
+            this.laDate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laDate.ForeColor = System.Drawing.SystemColors.Window;
+            this.laDate.Location = new System.Drawing.Point(890, 37);
+            this.laDate.Name = "laDate";
+            this.laDate.Size = new System.Drawing.Size(79, 14);
+            this.laDate.TabIndex = 147;
+            this.laDate.Text = "0000.00.00";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panelLogo);
@@ -128,6 +340,18 @@ namespace FluxTool_CleanerSystem_K4_2
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(276, 100);
             this.panel2.TabIndex = 0;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(146)))), ((int)(((byte)(190)))));
+            this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(276, 100);
+            this.panelLogo.TabIndex = 18;
+            this.panelLogo.Click += new System.EventHandler(this.panelLogo_Click);
             // 
             // panel9
             // 
@@ -137,122 +361,6 @@ namespace FluxTool_CleanerSystem_K4_2
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1280, 100);
             this.panel9.TabIndex = 38;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(1194, 100);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(86, 824);
-            this.panel7.TabIndex = 40;
-            // 
-            // panelOption
-            // 
-            this.panelOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelOption.Controls.Add(this.checkBoxInterlockRelease);
-            this.panelOption.Location = new System.Drawing.Point(28, 106);
-            this.panelOption.Name = "panelOption";
-            this.panelOption.Size = new System.Drawing.Size(248, 102);
-            this.panelOption.TabIndex = 154;
-            this.panelOption.Visible = false;
-            // 
-            // checkBoxInterlockRelease
-            // 
-            this.checkBoxInterlockRelease.AutoSize = true;
-            this.checkBoxInterlockRelease.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxInterlockRelease.ForeColor = System.Drawing.Color.Navy;
-            this.checkBoxInterlockRelease.Location = new System.Drawing.Point(16, 19);
-            this.checkBoxInterlockRelease.Name = "checkBoxInterlockRelease";
-            this.checkBoxInterlockRelease.Size = new System.Drawing.Size(155, 25);
-            this.checkBoxInterlockRelease.TabIndex = 0;
-            this.checkBoxInterlockRelease.Text = "Interlock release";
-            this.checkBoxInterlockRelease.UseVisualStyleBackColor = true;
-            this.checkBoxInterlockRelease.Click += new System.EventHandler(this.checkBoxInterlockRelease_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.Controls.Add(this.btnWaterTank);
-            this.panel8.Controls.Add(this.btnRightModule);
-            this.panel8.Controls.Add(this.btnCenterModule);
-            this.panel8.Controls.Add(this.btnLeftModule);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(86, 824);
-            this.panel8.TabIndex = 41;
-            // 
-            // btnWaterTank
-            // 
-            this.btnWaterTank.BackColor = System.Drawing.Color.Transparent;
-            this.btnWaterTank.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWaterTank.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnWaterTank.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWaterTank.ForeColor = System.Drawing.Color.White;
-            this.btnWaterTank.Location = new System.Drawing.Point(14, 447);
-            this.btnWaterTank.Name = "btnWaterTank";
-            this.btnWaterTank.Size = new System.Drawing.Size(69, 50);
-            this.btnWaterTank.TabIndex = 9;
-            this.btnWaterTank.Text = "WaterTank";
-            this.btnWaterTank.UseVisualStyleBackColor = false;
-            this.btnWaterTank.Click += new System.EventHandler(this.btnModule_Click);
-            // 
-            // btnRightModule
-            // 
-            this.btnRightModule.BackColor = System.Drawing.Color.Transparent;
-            this.btnRightModule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRightModule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRightModule.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRightModule.ForeColor = System.Drawing.Color.White;
-            this.btnRightModule.Location = new System.Drawing.Point(14, 391);
-            this.btnRightModule.Name = "btnRightModule";
-            this.btnRightModule.Size = new System.Drawing.Size(69, 50);
-            this.btnRightModule.TabIndex = 8;
-            this.btnRightModule.Text = "CH3";
-            this.btnRightModule.UseVisualStyleBackColor = false;
-            this.btnRightModule.Click += new System.EventHandler(this.btnModule_Click);
-            // 
-            // btnCenterModule
-            // 
-            this.btnCenterModule.BackColor = System.Drawing.Color.Transparent;
-            this.btnCenterModule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCenterModule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCenterModule.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCenterModule.ForeColor = System.Drawing.Color.White;
-            this.btnCenterModule.Location = new System.Drawing.Point(14, 335);
-            this.btnCenterModule.Name = "btnCenterModule";
-            this.btnCenterModule.Size = new System.Drawing.Size(69, 50);
-            this.btnCenterModule.TabIndex = 7;
-            this.btnCenterModule.Text = "CH2";
-            this.btnCenterModule.UseVisualStyleBackColor = false;
-            this.btnCenterModule.Click += new System.EventHandler(this.btnModule_Click);
-            // 
-            // btnLeftModule
-            // 
-            this.btnLeftModule.BackColor = System.Drawing.Color.Transparent;
-            this.btnLeftModule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLeftModule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLeftModule.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLeftModule.ForeColor = System.Drawing.Color.White;
-            this.btnLeftModule.Location = new System.Drawing.Point(14, 279);
-            this.btnLeftModule.Name = "btnLeftModule";
-            this.btnLeftModule.Size = new System.Drawing.Size(69, 50);
-            this.btnLeftModule.TabIndex = 6;
-            this.btnLeftModule.Text = "CH1";
-            this.btnLeftModule.UseVisualStyleBackColor = false;
-            this.btnLeftModule.Click += new System.EventHandler(this.btnModule_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 100);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(22, 824);
-            this.panel6.TabIndex = 39;
             // 
             // panel10
             // 
@@ -496,228 +604,126 @@ namespace FluxTool_CleanerSystem_K4_2
             this.btnIO.UseVisualStyleBackColor = false;
             this.btnIO.Click += new System.EventHandler(this.btnIO_Click);
             // 
-            // panel5
+            // panel7
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.labelInterlockEnaDis);
-            this.panel5.Controls.Add(this.pictureBoxEventLog);
-            this.panel5.Controls.Add(this.btnEventLog);
-            this.panel5.Controls.Add(this.pictureBoxAlarm);
-            this.panel5.Controls.Add(this.pictureBoxAlarm2);
-            this.panel5.Controls.Add(this.pictureBoxUserRegist);
-            this.panel5.Controls.Add(this.btnUserRegist);
-            this.panel5.Controls.Add(this.laUserLevel);
-            this.panel5.Controls.Add(this.btnAlarm);
-            this.panel5.Controls.Add(this.labelPageName);
-            this.panel5.Controls.Add(this.laTime);
-            this.panel5.Controls.Add(this.laDate);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1005, 100);
-            this.panel5.TabIndex = 20;
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(1194, 100);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(86, 824);
+            this.panel7.TabIndex = 40;
             // 
-            // button1
+            // panel8
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(296, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 50);
-            this.button1.TabIndex = 161;
-            this.button1.Text = "Buzzer\r\noff";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.pictureBoxAlarm_Click);
+            this.panel8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.Controls.Add(this.btnWaterTank);
+            this.panel8.Controls.Add(this.btnRightModule);
+            this.panel8.Controls.Add(this.btnCenterModule);
+            this.panel8.Controls.Add(this.btnLeftModule);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(86, 824);
+            this.panel8.TabIndex = 41;
             // 
-            // labelInterlockEnaDis
+            // btnWaterTank
             // 
-            this.labelInterlockEnaDis.AutoSize = true;
-            this.labelInterlockEnaDis.BackColor = System.Drawing.Color.Transparent;
-            this.labelInterlockEnaDis.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInterlockEnaDis.ForeColor = System.Drawing.Color.Yellow;
-            this.labelInterlockEnaDis.Location = new System.Drawing.Point(53, 67);
-            this.labelInterlockEnaDis.Name = "labelInterlockEnaDis";
-            this.labelInterlockEnaDis.Size = new System.Drawing.Size(211, 32);
-            this.labelInterlockEnaDis.TabIndex = 157;
-            this.labelInterlockEnaDis.Text = "Interlock release!";
-            this.labelInterlockEnaDis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelInterlockEnaDis.Visible = false;
+            this.btnWaterTank.BackColor = System.Drawing.Color.Transparent;
+            this.btnWaterTank.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWaterTank.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnWaterTank.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWaterTank.ForeColor = System.Drawing.Color.White;
+            this.btnWaterTank.Location = new System.Drawing.Point(14, 447);
+            this.btnWaterTank.Name = "btnWaterTank";
+            this.btnWaterTank.Size = new System.Drawing.Size(69, 50);
+            this.btnWaterTank.TabIndex = 9;
+            this.btnWaterTank.Text = "WaterTank";
+            this.btnWaterTank.UseVisualStyleBackColor = false;
+            this.btnWaterTank.Click += new System.EventHandler(this.btnModule_Click);
             // 
-            // pictureBoxEventLog
+            // btnRightModule
             // 
-            this.pictureBoxEventLog.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxEventLog.BackgroundImage = global::FluxTool_CleanerSystem_K4_2.Properties.Resources.log;
-            this.pictureBoxEventLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxEventLog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxEventLog.Location = new System.Drawing.Point(529, 29);
-            this.pictureBoxEventLog.Name = "pictureBoxEventLog";
-            this.pictureBoxEventLog.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxEventLog.TabIndex = 156;
-            this.pictureBoxEventLog.TabStop = false;
-            this.pictureBoxEventLog.Click += new System.EventHandler(this.btnEventLog_Click);
+            this.btnRightModule.BackColor = System.Drawing.Color.Transparent;
+            this.btnRightModule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRightModule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRightModule.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRightModule.ForeColor = System.Drawing.Color.White;
+            this.btnRightModule.Location = new System.Drawing.Point(14, 391);
+            this.btnRightModule.Name = "btnRightModule";
+            this.btnRightModule.Size = new System.Drawing.Size(69, 50);
+            this.btnRightModule.TabIndex = 8;
+            this.btnRightModule.Text = "CH3";
+            this.btnRightModule.UseVisualStyleBackColor = false;
+            this.btnRightModule.Click += new System.EventHandler(this.btnModule_Click);
             // 
-            // btnEventLog
+            // btnCenterModule
             // 
-            this.btnEventLog.BackColor = System.Drawing.Color.Transparent;
-            this.btnEventLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEventLog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEventLog.FlatAppearance.BorderSize = 0;
-            this.btnEventLog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEventLog.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEventLog.ForeColor = System.Drawing.Color.White;
-            this.btnEventLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEventLog.Location = new System.Drawing.Point(570, 29);
-            this.btnEventLog.Name = "btnEventLog";
-            this.btnEventLog.Size = new System.Drawing.Size(111, 42);
-            this.btnEventLog.TabIndex = 155;
-            this.btnEventLog.Text = "Event Log";
-            this.btnEventLog.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEventLog.UseVisualStyleBackColor = false;
-            this.btnEventLog.Click += new System.EventHandler(this.btnEventLog_Click);
+            this.btnCenterModule.BackColor = System.Drawing.Color.Transparent;
+            this.btnCenterModule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCenterModule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCenterModule.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCenterModule.ForeColor = System.Drawing.Color.White;
+            this.btnCenterModule.Location = new System.Drawing.Point(14, 335);
+            this.btnCenterModule.Name = "btnCenterModule";
+            this.btnCenterModule.Size = new System.Drawing.Size(69, 50);
+            this.btnCenterModule.TabIndex = 7;
+            this.btnCenterModule.Text = "CH2";
+            this.btnCenterModule.UseVisualStyleBackColor = false;
+            this.btnCenterModule.Click += new System.EventHandler(this.btnModule_Click);
             // 
-            // pictureBoxAlarm
+            // btnLeftModule
             // 
-            this.pictureBoxAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxAlarm.BackgroundImage = global::FluxTool_CleanerSystem_K4_2.Properties.Resources.Alarm1;
-            this.pictureBoxAlarm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxAlarm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxAlarm.Location = new System.Drawing.Point(371, 29);
-            this.pictureBoxAlarm.Name = "pictureBoxAlarm";
-            this.pictureBoxAlarm.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxAlarm.TabIndex = 150;
-            this.pictureBoxAlarm.TabStop = false;
-            this.pictureBoxAlarm.Click += new System.EventHandler(this.pictureBoxAlarm_Click);
+            this.btnLeftModule.BackColor = System.Drawing.Color.Transparent;
+            this.btnLeftModule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLeftModule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLeftModule.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLeftModule.ForeColor = System.Drawing.Color.White;
+            this.btnLeftModule.Location = new System.Drawing.Point(14, 279);
+            this.btnLeftModule.Name = "btnLeftModule";
+            this.btnLeftModule.Size = new System.Drawing.Size(69, 50);
+            this.btnLeftModule.TabIndex = 6;
+            this.btnLeftModule.Text = "CH1";
+            this.btnLeftModule.UseVisualStyleBackColor = false;
+            this.btnLeftModule.Click += new System.EventHandler(this.btnModule_Click);
             // 
-            // pictureBoxAlarm2
+            // panelOption
             // 
-            this.pictureBoxAlarm2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxAlarm2.BackgroundImage = global::FluxTool_CleanerSystem_K4_2.Properties.Resources.Alarm2;
-            this.pictureBoxAlarm2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxAlarm2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxAlarm2.Location = new System.Drawing.Point(371, 29);
-            this.pictureBoxAlarm2.Name = "pictureBoxAlarm2";
-            this.pictureBoxAlarm2.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxAlarm2.TabIndex = 154;
-            this.pictureBoxAlarm2.TabStop = false;
-            this.pictureBoxAlarm2.Click += new System.EventHandler(this.pictureBoxAlarm_Click);
+            this.panelOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelOption.Controls.Add(this.checkBoxInterlockRelease);
+            this.panelOption.Location = new System.Drawing.Point(28, 106);
+            this.panelOption.Name = "panelOption";
+            this.panelOption.Size = new System.Drawing.Size(248, 102);
+            this.panelOption.TabIndex = 154;
+            this.panelOption.Visible = false;
             // 
-            // pictureBoxUserRegist
+            // checkBoxInterlockRelease
             // 
-            this.pictureBoxUserRegist.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxUserRegist.BackgroundImage = global::FluxTool_CleanerSystem_K4_2.Properties.Resources.register;
-            this.pictureBoxUserRegist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxUserRegist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxUserRegist.Location = new System.Drawing.Point(687, 29);
-            this.pictureBoxUserRegist.Name = "pictureBoxUserRegist";
-            this.pictureBoxUserRegist.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxUserRegist.TabIndex = 153;
-            this.pictureBoxUserRegist.TabStop = false;
-            this.pictureBoxUserRegist.Click += new System.EventHandler(this.btnUserRegist_Click);
+            this.checkBoxInterlockRelease.AutoSize = true;
+            this.checkBoxInterlockRelease.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxInterlockRelease.ForeColor = System.Drawing.Color.Navy;
+            this.checkBoxInterlockRelease.Location = new System.Drawing.Point(16, 19);
+            this.checkBoxInterlockRelease.Name = "checkBoxInterlockRelease";
+            this.checkBoxInterlockRelease.Size = new System.Drawing.Size(155, 25);
+            this.checkBoxInterlockRelease.TabIndex = 0;
+            this.checkBoxInterlockRelease.Text = "Interlock release";
+            this.checkBoxInterlockRelease.UseVisualStyleBackColor = true;
+            this.checkBoxInterlockRelease.Click += new System.EventHandler(this.checkBoxInterlockRelease_Click);
             // 
-            // btnUserRegist
+            // panel6
             // 
-            this.btnUserRegist.BackColor = System.Drawing.Color.Transparent;
-            this.btnUserRegist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUserRegist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUserRegist.FlatAppearance.BorderSize = 0;
-            this.btnUserRegist.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUserRegist.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserRegist.ForeColor = System.Drawing.Color.White;
-            this.btnUserRegist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserRegist.Location = new System.Drawing.Point(728, 29);
-            this.btnUserRegist.Name = "btnUserRegist";
-            this.btnUserRegist.Size = new System.Drawing.Size(111, 42);
-            this.btnUserRegist.TabIndex = 152;
-            this.btnUserRegist.Text = "User regist";
-            this.btnUserRegist.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnUserRegist.UseVisualStyleBackColor = false;
-            this.btnUserRegist.Click += new System.EventHandler(this.btnUserRegist_Click);
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 100);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(22, 824);
+            this.panel6.TabIndex = 39;
             // 
-            // laUserLevel
+            // HeaterInitTimer
             // 
-            this.laUserLevel.AutoSize = true;
-            this.laUserLevel.BackColor = System.Drawing.Color.Transparent;
-            this.laUserLevel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laUserLevel.ForeColor = System.Drawing.Color.Yellow;
-            this.laUserLevel.Location = new System.Drawing.Point(890, 17);
-            this.laUserLevel.Name = "laUserLevel";
-            this.laUserLevel.Size = new System.Drawing.Size(17, 14);
-            this.laUserLevel.TabIndex = 151;
-            this.laUserLevel.Text = "--";
-            // 
-            // btnAlarm
-            // 
-            this.btnAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlarm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAlarm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlarm.FlatAppearance.BorderSize = 0;
-            this.btnAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAlarm.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlarm.ForeColor = System.Drawing.Color.White;
-            this.btnAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlarm.Location = new System.Drawing.Point(412, 29);
-            this.btnAlarm.Name = "btnAlarm";
-            this.btnAlarm.Size = new System.Drawing.Size(111, 42);
-            this.btnAlarm.TabIndex = 18;
-            this.btnAlarm.Text = "Alarm";
-            this.btnAlarm.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAlarm.UseVisualStyleBackColor = false;
-            this.btnAlarm.Click += new System.EventHandler(this.btnAlarm_Click);
-            // 
-            // labelPageName
-            // 
-            this.labelPageName.AutoSize = true;
-            this.labelPageName.BackColor = System.Drawing.Color.Transparent;
-            this.labelPageName.Font = new System.Drawing.Font("Nirmala UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPageName.ForeColor = System.Drawing.Color.White;
-            this.labelPageName.Location = new System.Drawing.Point(20, 16);
-            this.labelPageName.Name = "labelPageName";
-            this.labelPageName.Size = new System.Drawing.Size(55, 54);
-            this.labelPageName.TabIndex = 149;
-            this.labelPageName.Text = "--";
-            this.labelPageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // laTime
-            // 
-            this.laTime.AutoSize = true;
-            this.laTime.BackColor = System.Drawing.Color.Transparent;
-            this.laTime.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laTime.ForeColor = System.Drawing.SystemColors.Window;
-            this.laTime.Location = new System.Drawing.Point(890, 57);
-            this.laTime.Name = "laTime";
-            this.laTime.Size = new System.Drawing.Size(63, 14);
-            this.laTime.TabIndex = 148;
-            this.laTime.Text = "00:00:00";
-            // 
-            // laDate
-            // 
-            this.laDate.AutoSize = true;
-            this.laDate.BackColor = System.Drawing.Color.Transparent;
-            this.laDate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laDate.ForeColor = System.Drawing.SystemColors.Window;
-            this.laDate.Location = new System.Drawing.Point(890, 37);
-            this.laDate.Name = "laDate";
-            this.laDate.Size = new System.Drawing.Size(79, 14);
-            this.laDate.TabIndex = 147;
-            this.laDate.Text = "0000.00.00";
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(146)))), ((int)(((byte)(190)))));
-            this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
-            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(276, 100);
-            this.panelLogo.TabIndex = 18;
-            this.panelLogo.Click += new System.EventHandler(this.panelLogo_Click);
+            this.HeaterInitTimer.Interval = 5000;
+            this.HeaterInitTimer.Tick += new System.EventHandler(this.HeaterInitTimer_Tick);
             // 
             // MainForm
             // 
@@ -740,12 +746,14 @@ namespace FluxTool_CleanerSystem_K4_2
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEventLog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserRegist)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panelOption.ResumeLayout(false);
-            this.panelOption.PerformLayout();
-            this.panel8.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToolHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOperation)).EndInit();
@@ -754,12 +762,10 @@ namespace FluxTool_CleanerSystem_K4_2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfigure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEventLog)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserRegist)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panelOption.ResumeLayout(false);
+            this.panelOption.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -810,5 +816,6 @@ namespace FluxTool_CleanerSystem_K4_2
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBoxToolHistory;
         private System.Windows.Forms.Button btnToolHistory;
+        private System.Windows.Forms.Timer HeaterInitTimer;
     }
 }

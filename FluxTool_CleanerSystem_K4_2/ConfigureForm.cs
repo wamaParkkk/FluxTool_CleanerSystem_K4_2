@@ -94,8 +94,10 @@ namespace FluxTool_CleanerSystem_K4_2
                     for (int i = 0; i < spString.Length; i++)
                     {
                         Configure_List.Water_Heating_Temp = double.Parse(spString[0]);
+                        Configure_List.Water_OverTempSet = double.Parse(spString[1]);
 
-                        txtBoxHeatingTemp.Text = (Configure_List.Water_Heating_Temp).ToString();                        
+                        txtBoxHeatingTemp.Text = (Configure_List.Water_Heating_Temp).ToString();
+                        txtBoxWaterOverTempSet.Text = (Configure_List.Water_OverTempSet).ToString();
                     }
                 }
             }
@@ -198,11 +200,13 @@ namespace FluxTool_CleanerSystem_K4_2
 
         private void btnHeatingTempSave_Click(object sender, EventArgs e)
         {
-            string sHeatingTemp = txtBoxHeatingTemp.Text.ToString().Trim();            
+            string sHeatingTemp = txtBoxHeatingTemp.Text.ToString().Trim();
+            string sWaterOverTempSet = txtBoxWaterOverTempSet.Text.ToString().Trim();
 
-            if (Temp_Parameter_WriteFile(sHeatingTemp))
+            if (Temp_Parameter_WriteFile(sHeatingTemp, sWaterOverTempSet))
             {
-                Configure_List.Water_Heating_Temp = double.Parse(sHeatingTemp);                
+                Configure_List.Water_Heating_Temp = double.Parse(sHeatingTemp);
+                Configure_List.Water_OverTempSet = double.Parse(sWaterOverTempSet);
 
                 MessageBox.Show("Configure values has been saved", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -212,13 +216,13 @@ namespace FluxTool_CleanerSystem_K4_2
             }
         }
 
-        private bool Temp_Parameter_WriteFile(string param1)
+        private bool Temp_Parameter_WriteFile(string param1, string param2)
         {
             string FileName = "HeatingTemp.txt";
 
             try
             {
-                File.WriteAllText(Global.ConfigurePath + FileName, param1, Encoding.Default);
+                File.WriteAllText(Global.ConfigurePath + FileName, param1 + "," + param2, Encoding.Default);
 
                 return true;
             }
