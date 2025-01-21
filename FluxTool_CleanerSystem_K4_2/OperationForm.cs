@@ -1172,6 +1172,12 @@ namespace FluxTool_CleanerSystem_K4_2
                                 MessageBox.Show("Back door is opened", "Notification");
                                 return;
                             }
+
+                            if (Global.GetDigValue((int)DigInputList.CH1_Door_Sensor_i) == "Off")
+                            {
+                                MessageBox.Show("Chamber door is opened", "Notification");
+                                return;
+                            }
                         }
 
                         if (MessageBox.Show("Do you want to proceed with the process?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -1273,6 +1279,12 @@ namespace FluxTool_CleanerSystem_K4_2
                                 MessageBox.Show("Back door is opened", "Notification");
                                 return;
                             }
+
+                            if (Global.GetDigValue((int)DigInputList.CH2_Door_Sensor_i) == "Off")
+                            {
+                                MessageBox.Show("Chamber door is opened", "Notification");
+                                return;
+                            }
                         }
 
                         if (MessageBox.Show("Do you want to proceed with the process?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -1372,6 +1384,12 @@ namespace FluxTool_CleanerSystem_K4_2
                             if (Global.GetDigValue((int)DigInputList.Back_Door_Sensor_i) == "Off")
                             {
                                 MessageBox.Show("Back door is opened", "Notification");
+                                return;
+                            }
+
+                            if (Global.GetDigValue((int)DigInputList.CH3_Door_Sensor_i) == "Off")
+                            {
+                                MessageBox.Show("Chamber door is opened", "Notification");
                                 return;
                             }
                         }
