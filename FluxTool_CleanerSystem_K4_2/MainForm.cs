@@ -643,8 +643,8 @@ namespace FluxTool_CleanerSystem_K4_2
                 
                 (Define.seqCtrl[(byte)MODULE._WATERTANK] == Define.CTRL_ALARM) ||
 
-                (Global.GetDigValue((int)DigInputList.EMO_Front_i) == "Off")) //||
-                //(Global.GetDigValue((int)DigInputList.EMO_Rear_i) == "Off"))
+                (Global.GetDigValue((int)DigInputList.EMO_Front_i) == "Off") ||
+                (Global.GetDigValue((int)DigInputList.EMO_Rear_i) == "Off"))
             {
                 if (Global.digSet.curDigSet[(int)DigOutputList.Tower_Lamp_Red_o] != null)
                 {

@@ -491,8 +491,8 @@ namespace FluxTool_CleanerSystem_K4_2
             // Interlock이 해제 상태인지 체크
             if (!Define.bInterlockRelease)
             {
-                if (GetDigValue((int)DigInputList.EMO_Front_i) == "Off") //||
-                    //(GetDigValue((int)DigInputList.EMO_Rear_i) == "Off"))
+                if ((GetDigValue((int)DigInputList.EMO_Front_i) == "Off") ||
+                    (GetDigValue((int)DigInputList.EMO_Rear_i) == "Off"))
                 {
                     ALL_VALVE_CLOSE();
                     PROCESS_ABORT();

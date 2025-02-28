@@ -657,11 +657,14 @@ namespace FluxTool_CleanerSystem_K4_2
                         digitalDlg.Init2("Home", "Backward", "Forward", "CH3 Cylinder Fwd/Bwd");
                         if (digitalDlg.ShowDialog() == DialogResult.OK)
                         {
-                            if (Global.GetDigValue((int)DigInputList.CH3_Door_Sensor_i) == "Off")
+                            if (!Define.bInterlockRelease)
                             {
-                                MessageBox.Show("Chamber door is opened", "Notification");
-                                return;
-                            }
+                                if (Global.GetDigValue((int)DigInputList.CH3_Door_Sensor_i) == "Off")
+                                {
+                                    MessageBox.Show("Chamber door is opened", "Notification");
+                                    return;
+                                }
+                            }                            
 
                             if (digitalDlg.m_strResult == "Home")
                             {
