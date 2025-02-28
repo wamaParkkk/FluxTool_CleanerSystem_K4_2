@@ -248,6 +248,7 @@ namespace FluxTool_CleanerSystem_K4_2
         public static bool bLeftEnable;
         public static bool bBackEnable;
         public static bool bRightEnable;
+        public static bool bToolIDSkip;
     }
     ////////////////////////////////////////////////////////
     

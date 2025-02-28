@@ -840,9 +840,7 @@ namespace FluxTool_CleanerSystem_K4_2
 
                         if (MessageBox.Show("Do you want to proceed with the process?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
-                            toolInfoRegistForm = new ToolInfoRegistForm();
-                            toolInfoRegistForm.Init(module);
-                            if (toolInfoRegistForm.ShowDialog() == DialogResult.OK)
+                            if (Configure_List.bToolIDSkip)
                             {
                                 Define.iSelectRecipeModule = module;
 
@@ -855,6 +853,24 @@ namespace FluxTool_CleanerSystem_K4_2
                                     Define.seqSts[module] = Define.STS_IDLE;
                                 }
                             }
+                            else
+                            {
+                                toolInfoRegistForm = new ToolInfoRegistForm();
+                                toolInfoRegistForm.Init(module);
+                                if (toolInfoRegistForm.ShowDialog() == DialogResult.OK)
+                                {
+                                    Define.iSelectRecipeModule = module;
+
+                                    recipeSelectForm = new RecipeSelectForm();
+
+                                    if (recipeSelectForm.ShowDialog() == DialogResult.OK)
+                                    {
+                                        Define.seqMode[module] = Define.MODE_PROCESS;
+                                        Define.seqCtrl[module] = Define.CTRL_RUN;
+                                        Define.seqSts[module] = Define.STS_IDLE;
+                                    }
+                                }
+                            }                            
                         }
                     }
                     break;

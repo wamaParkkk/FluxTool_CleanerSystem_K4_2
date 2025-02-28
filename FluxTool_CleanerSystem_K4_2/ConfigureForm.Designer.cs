@@ -65,9 +65,12 @@ namespace FluxTool_CleanerSystem_K4_2
             this.checkBoxBack = new System.Windows.Forms.CheckBox();
             this.checkBoxLeft = new System.Windows.Forms.CheckBox();
             this.checkBoxFront = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBoxToolIDSkip = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -539,12 +542,37 @@ namespace FluxTool_CleanerSystem_K4_2
             this.checkBoxFront.UseVisualStyleBackColor = true;
             this.checkBoxFront.Click += new System.EventHandler(this.checkBoxFront_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.checkBoxToolIDSkip);
+            this.groupBox4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox4.Location = new System.Drawing.Point(677, 608);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(378, 100);
+            this.groupBox4.TabIndex = 14;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tool ID skip";
+            // 
+            // checkBoxToolIDSkip
+            // 
+            this.checkBoxToolIDSkip.AutoSize = true;
+            this.checkBoxToolIDSkip.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxToolIDSkip.Location = new System.Drawing.Point(32, 46);
+            this.checkBoxToolIDSkip.Name = "checkBoxToolIDSkip";
+            this.checkBoxToolIDSkip.Size = new System.Drawing.Size(70, 29);
+            this.checkBoxToolIDSkip.TabIndex = 0;
+            this.checkBoxToolIDSkip.Text = "Skip";
+            this.checkBoxToolIDSkip.UseVisualStyleBackColor = true;
+            this.checkBoxToolIDSkip.Click += new System.EventHandler(this.checkBoxToolIDSkip_Click);
+            // 
             // ConfigureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1172, 824);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -561,6 +589,8 @@ namespace FluxTool_CleanerSystem_K4_2
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -601,5 +631,7 @@ namespace FluxTool_CleanerSystem_K4_2
         private System.Windows.Forms.TextBox txtBoxWaterOverTempSet;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.CheckBox checkBoxToolIDSkip;
     }
 }

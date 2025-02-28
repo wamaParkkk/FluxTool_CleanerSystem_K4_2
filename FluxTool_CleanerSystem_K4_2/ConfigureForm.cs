@@ -32,6 +32,7 @@ namespace FluxTool_CleanerSystem_K4_2
             TEMP_PARAMETER_LOAD();
 
             COVER_DOOR_OPTION_LOAD();
+            TOOL_ID_SKIP_LOAD();
         }
 
         private void ConfigureForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -132,6 +133,22 @@ namespace FluxTool_CleanerSystem_K4_2
             {
                 MessageBox.Show(ex.Message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }            
+        }
+
+        private void TOOL_ID_SKIP_LOAD()
+        {
+            try
+            {
+                // Ini file read
+                StringBuilder sbToolIDSkip = new StringBuilder();
+                GetPrivateProfileString("Skip", "Enable", "", sbToolIDSkip, sbToolIDSkip.Capacity, string.Format("{0}{1}", Global.ConfigurePath, "ToolIDSkip.ini"));
+                Configure_List.bToolIDSkip = Convert.ToBoolean(sbToolIDSkip.ToString().Trim());
+                checkBoxToolIDSkip.Checked = Configure_List.bToolIDSkip;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtBoxDoorOpenCloseTimeout_Click(object sender, EventArgs e)
@@ -295,6 +312,32 @@ namespace FluxTool_CleanerSystem_K4_2
 
                 COVER_DOOR_OPTION_LOAD();
             }                              
+        }
+
+        private void checkBoxToolIDSkip_Click(object sender, EventArgs e)
+        {
+            if (Define.UserLevel == "Master")
+            {
+                try
+                {
+                    CheckBox btn = (CheckBox)sender;
+                    Configure_List.bToolIDSkip = btn.Checked;
+                    if (Configure_List.bToolIDSkip)
+                        WritePrivateProfileString("Skip", "Enable", "True", string.Format("{0}{1}", Global.ConfigurePath, "ToolIDSkip.ini"));
+                    else
+                        WritePrivateProfileString("Skip", "Enable", "False", string.Format("{0}{1}", Global.ConfigurePath, "ToolIDSkip.ini"));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Only master level can be set", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                COVER_DOOR_OPTION_LOAD();
+            }
         }
     }
 }
