@@ -53,6 +53,9 @@ namespace FluxTool_CleanerSystem_K4_2
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtBoxWaterOverTempSet = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnHeatingTempSave = new System.Windows.Forms.Button();
             this.txtBoxHeatingTemp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,9 +65,6 @@ namespace FluxTool_CleanerSystem_K4_2
             this.checkBoxBack = new System.Windows.Forms.CheckBox();
             this.checkBoxLeft = new System.Windows.Forms.CheckBox();
             this.checkBoxFront = new System.Windows.Forms.CheckBox();
-            this.txtBoxWaterOverTempSet = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -379,7 +379,44 @@ namespace FluxTool_CleanerSystem_K4_2
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "< Water heating >";
-            this.groupBox2.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Navy;
+            this.label11.Location = new System.Drawing.Point(333, 97);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 25);
+            this.label11.TabIndex = 59;
+            this.label11.Text = "℃";
+            // 
+            // txtBoxWaterOverTempSet
+            // 
+            this.txtBoxWaterOverTempSet.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBoxWaterOverTempSet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBoxWaterOverTempSet.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxWaterOverTempSet.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtBoxWaterOverTempSet.Location = new System.Drawing.Point(171, 92);
+            this.txtBoxWaterOverTempSet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtBoxWaterOverTempSet.Name = "txtBoxWaterOverTempSet";
+            this.txtBoxWaterOverTempSet.ReadOnly = true;
+            this.txtBoxWaterOverTempSet.Size = new System.Drawing.Size(152, 30);
+            this.txtBoxWaterOverTempSet.TabIndex = 58;
+            this.txtBoxWaterOverTempSet.Tag = "1";
+            this.txtBoxWaterOverTempSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxWaterOverTempSet.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Navy;
+            this.label12.Location = new System.Drawing.Point(56, 94);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(105, 25);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Over temp";
             // 
             // btnHeatingTempSave
             // 
@@ -501,44 +538,6 @@ namespace FluxTool_CleanerSystem_K4_2
             this.checkBoxFront.Text = "Front";
             this.checkBoxFront.UseVisualStyleBackColor = true;
             this.checkBoxFront.Click += new System.EventHandler(this.checkBoxFront_Click);
-            // 
-            // txtBoxWaterOverTempSet
-            // 
-            this.txtBoxWaterOverTempSet.BackColor = System.Drawing.SystemColors.Control;
-            this.txtBoxWaterOverTempSet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtBoxWaterOverTempSet.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxWaterOverTempSet.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtBoxWaterOverTempSet.Location = new System.Drawing.Point(171, 92);
-            this.txtBoxWaterOverTempSet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtBoxWaterOverTempSet.Name = "txtBoxWaterOverTempSet";
-            this.txtBoxWaterOverTempSet.ReadOnly = true;
-            this.txtBoxWaterOverTempSet.Size = new System.Drawing.Size(152, 30);
-            this.txtBoxWaterOverTempSet.TabIndex = 58;
-            this.txtBoxWaterOverTempSet.Tag = "1";
-            this.txtBoxWaterOverTempSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBoxWaterOverTempSet.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.Navy;
-            this.label12.Location = new System.Drawing.Point(56, 94);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 25);
-            this.label12.TabIndex = 57;
-            this.label12.Text = "Over temp";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.Navy;
-            this.label11.Location = new System.Drawing.Point(333, 97);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 25);
-            this.label11.TabIndex = 59;
-            this.label11.Text = "℃";
             // 
             // ConfigureForm
             // 

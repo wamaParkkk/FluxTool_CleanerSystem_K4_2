@@ -219,7 +219,6 @@ namespace FluxTool_CleanerSystem_K4_2
             this.label6.Size = new System.Drawing.Size(16, 17);
             this.label6.TabIndex = 268;
             this.label6.Text = "C";
-            this.label6.Visible = false;
             // 
             // label5
             // 
@@ -230,7 +229,6 @@ namespace FluxTool_CleanerSystem_K4_2
             this.label5.Size = new System.Drawing.Size(16, 17);
             this.label5.TabIndex = 267;
             this.label5.Text = "C";
-            this.label5.Visible = false;
             // 
             // label4
             // 
@@ -241,7 +239,6 @@ namespace FluxTool_CleanerSystem_K4_2
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 266;
             this.label4.Text = "Setting";
-            this.label4.Visible = false;
             // 
             // textBoxSettingTemp
             // 
@@ -256,7 +253,6 @@ namespace FluxTool_CleanerSystem_K4_2
             this.textBoxSettingTemp.Tag = "1";
             this.textBoxSettingTemp.Text = "0";
             this.textBoxSettingTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxSettingTemp.Visible = false;
             this.textBoxSettingTemp.Click += new System.EventHandler(this.Analog_Click);
             // 
             // label3
@@ -268,7 +264,6 @@ namespace FluxTool_CleanerSystem_K4_2
             this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 264;
             this.label3.Text = "Current";
-            this.label3.Visible = false;
             // 
             // textBoxCurrentTemp
             // 
@@ -284,7 +279,6 @@ namespace FluxTool_CleanerSystem_K4_2
             this.textBoxCurrentTemp.Tag = "0";
             this.textBoxCurrentTemp.Text = "0";
             this.textBoxCurrentTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxCurrentTemp.Visible = false;
             // 
             // label2
             // 
