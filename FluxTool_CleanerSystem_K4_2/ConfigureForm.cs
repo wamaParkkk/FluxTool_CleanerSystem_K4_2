@@ -336,7 +336,7 @@ namespace FluxTool_CleanerSystem_K4_2
             {
                 MessageBox.Show("Only master level can be set", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                COVER_DOOR_OPTION_LOAD();
+                TOOL_ID_SKIP_LOAD();
             }
         }
     }
