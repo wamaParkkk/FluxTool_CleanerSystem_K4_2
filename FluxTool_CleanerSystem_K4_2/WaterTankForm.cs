@@ -336,6 +336,7 @@ namespace FluxTool_CleanerSystem_K4_2
 
         private void Analog_Click(object sender, EventArgs e)
         {
+            /*
             if ((Define.seqCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE) ||
                 (Define.seqCylinderCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE) ||
 
@@ -350,7 +351,8 @@ namespace FluxTool_CleanerSystem_K4_2
                 MessageBox.Show("CH1/CH2/CH3/Water tank process in progress", "Notification");
                 return;
             }
-            
+            */
+
             try
             {
                 analogDlg = new AnalogDlg();
@@ -375,6 +377,7 @@ namespace FluxTool_CleanerSystem_K4_2
 
         private void Digital_Click(object sender, EventArgs e)
         {
+            /*
             if ((Define.seqCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE) ||
                 (Define.seqCylinderCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE) ||
 
@@ -389,6 +392,7 @@ namespace FluxTool_CleanerSystem_K4_2
                 MessageBox.Show("CH1/CH2/CH3/Water tank process in progress", "Notification");
                 return;
             }
+            */
 
             Button btn = (Button)sender;
 
@@ -411,6 +415,7 @@ namespace FluxTool_CleanerSystem_K4_2
 
         private void Digital_Click2(object sender, EventArgs e)
         {
+            /*
             if ((Define.seqCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE) ||
                 (Define.seqCylinderCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE) ||
 
@@ -425,6 +430,7 @@ namespace FluxTool_CleanerSystem_K4_2
                 MessageBox.Show("CH1/CH2/CH3/Water tank process in progress", "Notification");
                 return;
             }
+            */
 
             TextBox btn = (TextBox)sender;
             digitalDlg = new DigitalDlg();
