@@ -104,6 +104,7 @@ namespace FluxTool_CleanerSystem_K4_2
 
             timerDisplay.Enabled = true;
             simulationTimer.Enabled = true;
+            HeaterInitTimer.Enabled = true;
 
             SubFormShow((byte)Page.LogInPage);
 

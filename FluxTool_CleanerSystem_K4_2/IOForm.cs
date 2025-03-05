@@ -114,12 +114,14 @@ namespace FluxTool_CleanerSystem_K4_2
 
         private void CH1_IO_Click(object sender, EventArgs e)
         {
+            /*
             if ((Define.seqCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE) ||
                 (Define.seqCylinderCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE))
             {
                 MessageBox.Show("CH1 process is in progress", "Notification");
                 return;
             }
+            */
 
             CheckBox btn = (CheckBox)sender;
 
@@ -136,12 +138,14 @@ namespace FluxTool_CleanerSystem_K4_2
 
         private void CH2_IO_Click(object sender, EventArgs e)
         {
+            /*
             if ((Define.seqCtrl[(byte)MODULE._PM2] != Define.CTRL_IDLE) ||
                 (Define.seqCylinderCtrl[(byte)MODULE._PM2] != Define.CTRL_IDLE))
             {
                 MessageBox.Show("CH2 process is in progress", "Notification");
                 return;
             }
+            */
 
             CheckBox btn = (CheckBox)sender;
 
@@ -158,12 +162,14 @@ namespace FluxTool_CleanerSystem_K4_2
 
         private void CH3_IO_Click(object sender, EventArgs e)
         {
+            /*
             if ((Define.seqCtrl[(byte)MODULE._PM3] != Define.CTRL_IDLE) ||
                 (Define.seqCylinderCtrl[(byte)MODULE._PM3] != Define.CTRL_IDLE))
             {
                 MessageBox.Show("CH3 process is in progress", "Notification");
                 return;
             }
+            */
 
             CheckBox btn = (CheckBox)sender;
 
@@ -180,6 +186,7 @@ namespace FluxTool_CleanerSystem_K4_2
 
         private void MAIN_IO_Click(object sender, EventArgs e)
         {
+            /*
             if ((Define.seqCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE) ||
                 (Define.seqCylinderCtrl[(byte)MODULE._PM1] != Define.CTRL_IDLE) ||
 
@@ -194,6 +201,7 @@ namespace FluxTool_CleanerSystem_K4_2
                 MessageBox.Show("CH1/CH2/CH3/Water tank process in progress", "Notification");
                 return;
             }
+            */
 
             CheckBox btn = (CheckBox)sender;
 
