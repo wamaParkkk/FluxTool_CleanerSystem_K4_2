@@ -743,7 +743,8 @@ namespace FluxTool_CleanerSystem_K4_2
                     (Define.seqCtrl[(byte)MODULE._PM2] != Define.CTRL_IDLE) ||
                     (Define.seqCtrl[(byte)MODULE._PM3] != Define.CTRL_IDLE))
                 {
-                    if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&         // 정상 상태                       
+                    if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&         // 정상 상태
+                        (GetDigValue((int)DigInputList.EMO_Rear_i) == "On") &&          // 정상 상태
                         (GetDigValue((int)DigInputList.Water_Level_Low_i) == "Off"))    // 정상 상태
                     {
                         if ((GetDigValue((int)DigInputList.Front_Door_Sensor_i) == "Off") ||
@@ -974,6 +975,7 @@ namespace FluxTool_CleanerSystem_K4_2
                     if (setValue == (uint)DigitalOffOn.On)
                     {
                         if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On") &&
                             (GetDigValue((int)DigInputList.CH1_Door_Sensor_i) == "On"))
                         {
                             return true;
@@ -996,6 +998,7 @@ namespace FluxTool_CleanerSystem_K4_2
                     if (setValue == (uint)DigitalOffOn.On)
                     {
                         if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On") &&
                             (GetDigValue((int)DigInputList.CH1_Door_Sensor_i) == "On"))
                         {
                             return true;
@@ -1009,7 +1012,8 @@ namespace FluxTool_CleanerSystem_K4_2
                     }
                     else
                     {
-                        if (GetDigValue((int)DigInputList.EMO_Front_i) == "On")                            
+                        if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On"))
                         {
                             return true;
                         }
@@ -1032,6 +1036,7 @@ namespace FluxTool_CleanerSystem_K4_2
                     if (setValue == (uint)DigitalOffOn.On)
                     {
                         if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On") &&
                             (GetDigValue((int)DigInputList.CH2_Door_Sensor_i) == "On"))
                         {
                             return true;
@@ -1054,6 +1059,7 @@ namespace FluxTool_CleanerSystem_K4_2
                     if (setValue == (uint)DigitalOffOn.On)
                     {
                         if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On") &&
                             (GetDigValue((int)DigInputList.CH2_Door_Sensor_i) == "On"))
                         {
                             return true;
@@ -1067,7 +1073,8 @@ namespace FluxTool_CleanerSystem_K4_2
                     }
                     else
                     {
-                        if (GetDigValue((int)DigInputList.EMO_Front_i) == "On")                            
+                        if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On"))
                         {
                             return true;
                         }
@@ -1090,6 +1097,7 @@ namespace FluxTool_CleanerSystem_K4_2
                     if (setValue == (uint)DigitalOffOn.On)
                     {
                         if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On") &&
                             (GetDigValue((int)DigInputList.CH3_Door_Sensor_i) == "On"))
                         {
                             return true;
@@ -1112,6 +1120,7 @@ namespace FluxTool_CleanerSystem_K4_2
                     if (setValue == (uint)DigitalOffOn.On)
                     {
                         if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On") &&
                             (GetDigValue((int)DigInputList.CH3_Door_Sensor_i) == "On"))
                         {
                             return true;
@@ -1125,7 +1134,8 @@ namespace FluxTool_CleanerSystem_K4_2
                     }
                     else
                     {
-                        if (GetDigValue((int)DigInputList.EMO_Front_i) == "On")                            
+                        if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On"))                         
                         {
                             return true;
                         }
