@@ -1,0 +1,8 @@
+[2025-03-20, 10:09:20] CH3_WaterValve_o :  Off
+[2025-03-20, 10:09:20] CH3_Air_Knife_o :  Off
+[2025-03-20, 10:09:20] CH3_Curtain_AirValve_o :  Off
+[2025-03-20, 10:09:20] CH3_Booster_AirValve_o :  Off
+[2025-03-20, 10:09:20] CH3_WaterValve_o :  Off
+[2025-03-20, 10:09:20] CH3_Air_Knife_o :  Off
+[2025-03-20, 10:09:20] CH3_Curtain_AirValve_o :  Off
+[2025-03-20, 10:09:20] CH3_Booster_AirValve_o :  Off

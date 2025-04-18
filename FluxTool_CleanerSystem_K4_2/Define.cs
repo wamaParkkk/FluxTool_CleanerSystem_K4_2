@@ -371,6 +371,13 @@ namespace FluxTool_CleanerSystem_K4_2
         public static string[] ToolInfoRegist_User = { string.Empty, string.Empty, string.Empty };
         public static string[] ToolInfoRegist_Lot = { string.Empty, string.Empty, string.Empty };
         public static string[] ToolInfoRegist_MC = { string.Empty, string.Empty, string.Empty };
-        public static string[] ToolInfoRegist_ToolID = { string.Empty, string.Empty, string.Empty };        
+        public static string[] ToolInfoRegist_ToolID = { string.Empty, string.Empty, string.Empty };
+
+        // Sql서버에 장비 상태 업로드 변수
+        public static string EqType;
+        public static string EqLineCode;
+        public static string EqAsset;
+        public static string EqRemarks1;
+        public static string EqRemarks2;
     }    
 }

@@ -1,0 +1,8 @@
+[2025-03-19, 11:44:46:313] Successfully read communication port information
+[2025-03-19, 11:44:46:319] 'COM1' 포트가 없습니다.
+[2025-03-19, 11:44:46:320] Failed to opened port
+[2025-03-19, 11:44:46:323] Heater controller initialization failed
+[2025-03-19, 11:44:46:324] Heater communication driver has been terminated
+[2025-03-19, 11:44:51:327] 01DWS,01,0103,0190
+
+[2025-03-19, 11:44:51:328] 포트가 닫혀 있습니다.

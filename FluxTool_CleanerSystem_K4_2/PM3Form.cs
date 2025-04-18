@@ -66,12 +66,8 @@ namespace FluxTool_CleanerSystem_K4_2
             // Process seq status
             if (Define.bChamberDisable[module])
             {
-                if (btnProcess.Enabled != false)
-                {
-                    btnProcess.Enabled = false;
-
-                    //HostConnection.Host_Set_RunStatus(Global.hostEquipmentInfo, ModuleName, "Disable");
-                }
+                if (btnProcess.Enabled != false)                
+                    btnProcess.Enabled = false;                                    
 
                 if (btnRetry.Enabled != false)
                     btnRetry.Enabled = false;
@@ -182,12 +178,8 @@ namespace FluxTool_CleanerSystem_K4_2
                 }
                 else if (Define.seqMode[module] == Define.MODE_IDLE)
                 {
-                    if (!btnProcess.Enabled)
-                    {
-                        btnProcess.Enabled = true;
-
-                        //HostConnection.Host_Set_RunStatus(Global.hostEquipmentInfo, ModuleName, "Idle");
-                    }
+                    if (!btnProcess.Enabled)                    
+                        btnProcess.Enabled = true;                                            
 
                     if (btnProcess.BackColor != Color.Transparent)
                         btnProcess.BackColor = Color.Transparent;

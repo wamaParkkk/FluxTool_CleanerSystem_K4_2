@@ -179,10 +179,7 @@ namespace FluxTool_CleanerSystem_K4_2.Squence
             alarm_List.alarm_code = almId;
             Define.sAlarmName = alarm_List.alarm_code;
 
-            Global.EventLog(almId + ":" + Define.sAlarmName, ModuleName, "Alarm");
-
-            //HostConnection.Host_Set_RunStatus(Global.hostEquipmentInfo, ModuleName, "Alarm");
-            //HostConnection.Host_Set_AlarmName(Global.hostEquipmentInfo, ModuleName, Define.sAlarmName);
+            Global.EventLog(almId + ":" + Define.sAlarmName, ModuleName, "Alarm");            
         }
 
         public void F_HOLD_STEP()
@@ -247,10 +244,7 @@ namespace FluxTool_CleanerSystem_K4_2.Squence
                 Define.seqCtrl[module] = Define.CTRL_RUNNING;
                 Define.seqSts[module] = Define.STS_PROCESS_ING;
 
-                Global.EventLog("START THE PROCESS.", ModuleName, "Event");
-
-                //HostConnection.Host_Set_ProcessEndTime(Global.hostEquipmentInfo, ModuleName, "");
-                //HostConnection.Host_Set_RunStatus(Global.hostEquipmentInfo, ModuleName, "Process");
+                Global.EventLog("START THE PROCESS.", ModuleName, "Event");                
             }
             else if ((Define.seqMode[module] == Define.MODE_PROCESS) && (Define.seqCtrl[module] == Define.CTRL_HOLD))
             {
@@ -357,9 +351,7 @@ namespace FluxTool_CleanerSystem_K4_2.Squence
                 Define.seqCtrl[module] = Define.CTRL_RUNNING;
                 Define.seqSts[module] = Define.STS_INIT_ING;
 
-                Global.EventLog("START THE INITIALIZE.", ModuleName, "Event");
-
-                //HostConnection.Host_Set_RunStatus(Global.hostEquipmentInfo, ModuleName, "Init");
+                Global.EventLog("START THE INITIALIZE.", ModuleName, "Event");                
             }
             else if ((Define.seqMode[module] == Define.MODE_INIT) && (Define.seqCtrl[module] == Define.CTRL_HOLD))
             {
@@ -432,9 +424,7 @@ namespace FluxTool_CleanerSystem_K4_2.Squence
 
                     Global.prcsInfo.prcsRecipeName[module] = Define.sSelectRecipeName[module];
 
-                    Global.EventLog("Recipe name : " + Global.prcsInfo.prcsRecipeName[module], ModuleName, "Event");
-
-                    //HostConnection.Host_Set_RecipeName(Global.hostEquipmentInfo, ModuleName, Global.prcsInfo.prcsRecipeName[module]);
+                    Global.EventLog("Recipe name : " + Global.prcsInfo.prcsRecipeName[module], ModuleName, "Event");                    
 
                     F_INC_STEP();
                 }
@@ -544,14 +534,7 @@ namespace FluxTool_CleanerSystem_K4_2.Squence
                 Global.prcsInfo.prcsStepTotalTime[module] = prcsRecipe.ProcessTime[prcsRecipe.StepNum - 1];
 
                 Global.EventLog("Process Step : " + (prcsRecipe.StepNum).ToString(), ModuleName, "Event");
-
-                // 서버에 매 초 경과되는 Process time을 보내려고 했으나, delay소지가 있어 경과되는 Step num을 보내는 것으로 수정 /////
-                string strProgressTime = string.Format("{0}/{1}",
-                        Global.prcsInfo.prcsCurrentStep[module].ToString(), Global.prcsInfo.prcsTotalStep[module].ToString());
-
-                //HostConnection.Host_Set_ProgressTime(Global.hostEquipmentInfo, ModuleName, strProgressTime);
-                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+                
                 // Water
                 if (prcsRecipe.Water[prcsRecipe.StepNum - 1] == "On")
                 {
@@ -713,13 +696,6 @@ namespace FluxTool_CleanerSystem_K4_2.Squence
 
                     // Ui에 표시 할 시간
                     Global.prcsInfo.prcsStepCurrentTime[module] = step.Times;
-
-                    /*
-                    string strProgressTime = string.Format("{0}/{1}",
-                        Global.prcsInfo.prcsStepCurrentTime[module].ToString(), Global.prcsInfo.prcsStepTotalTime[module].ToString());
-                    
-                    HostConnection.Host_Set_ProgressTime(Global.hostEquipmentInfo, ModuleName, strProgressTime);
-                    */
                 }
             }
         }
@@ -763,8 +739,7 @@ namespace FluxTool_CleanerSystem_K4_2.Squence
 
         private void P_PROCESS_ProcessEnd()
         {
-            Global.prcsInfo.prcsEndTime[module] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            //HostConnection.Host_Set_ProcessEndTime(Global.hostEquipmentInfo, ModuleName, Global.prcsInfo.prcsEndTime[module]);
+            Global.prcsInfo.prcsEndTime[module] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");            
 
             Define.seqMode[module] = Define.MODE_IDLE;
             Define.seqCtrl[module] = Define.CTRL_IDLE;
