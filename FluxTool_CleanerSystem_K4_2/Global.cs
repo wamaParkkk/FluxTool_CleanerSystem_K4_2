@@ -52,7 +52,7 @@ namespace FluxTool_CleanerSystem_K4_2
         public static string dailyCntfilePath = Path.GetFullPath(Path.Combine(System.AppContext.BaseDirectory, @"..\..\DailyCount\"));
         public static string toolHistoryfilePath = Path.GetFullPath(Path.Combine(System.AppContext.BaseDirectory, @"..\..\ToolHistory\"));
         
-        public static string hostEquipmentInfo_Log = "K5EE_FluxtoolCleaningSystemLog";
+        public static string hostEquipmentInfo_Log = "K5EE_FluxtoolCleaningSystemLog_K4_2";
 
         private static Timer timer = new Timer();
 
